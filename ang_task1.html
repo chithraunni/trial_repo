@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<style>
+
+.in,#out{
+    margin: auto;
+    max-width: 350px;
+    height: 165px;
+    border: 1px solid red;
+    background-color: yellow;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+}
+
+#out{
+    
+    background-color: #00FFFF;
+}
+</style>
+
+<body>
+<div ng-app="">
+
+<div class="in">
+<form> 
+<pre>
+<p>  First Name: <input type="text" ng-model="fn"></p>
+<p>  Last Name:  <input type="text" ng-model="ln"></p>
+      Gender:     <select ng-model="s1">
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+</select>
+</pre>
+</form>
+</div>
+
+<div id="out">
+<p>Hi <span ng-bind="fn"></span></p>
+
+<p ng-bind="fn"></p>
+
+<p>Your lastname is {{ln}}</p>
+<p>You are a <span ng-bind="s1"></span></p>
+
+</div>
+
+</div>
+</body>
+</html>
